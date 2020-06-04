@@ -1,4 +1,4 @@
-package com.example.internitytasks.Classes;
+package com.example.internitytasks.Models;
 
 public class Model {
     private String title,desc;

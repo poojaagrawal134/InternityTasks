@@ -11,6 +11,10 @@
             android:id="@+id/nav_About"
             android:icon="@drawable/ic_accessibility_black_24dp"
             android:title="About" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="Profile" />
 
     </group>
 

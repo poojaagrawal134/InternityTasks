@@ -1,4 +1,4 @@
-package com.example.internitytasks;
+package com.example.internitytasks.Activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.internitytasks.R;
 
 public class MainActivity extends AppCompatActivity {
     Button b1;

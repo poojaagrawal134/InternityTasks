@@ -1,4 +1,4 @@
-package com.example.internitytasks.Classes;
+package com.example.internitytasks.Models;
 
 import android.view.View;
 import android.widget.ImageView;

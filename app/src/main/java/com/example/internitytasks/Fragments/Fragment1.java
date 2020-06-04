@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.internitytasks.Adapter.MyAdapter;
-import com.example.internitytasks.Classes.Model;
+import com.example.internitytasks.Models.Model;
 import com.example.internitytasks.R;
 
 import java.util.ArrayList;

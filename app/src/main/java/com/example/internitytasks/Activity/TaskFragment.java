@@ -1,4 +1,4 @@
-package com.example.internitytasks;
+package com.example.internitytasks.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.example.internitytasks.Fragments.BlueFragment;
 import com.example.internitytasks.Fragments.GreenFragment;
+import com.example.internitytasks.R;
 
 public class TaskFragment extends AppCompatActivity implements GreenFragment.OnGreenFragmentListener{
     private static final String BLUE_TAG = "blue";

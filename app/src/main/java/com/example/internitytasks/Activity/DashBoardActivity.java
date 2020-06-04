@@ -1,4 +1,4 @@
-package com.example.internitytasks;
+package com.example.internitytasks.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -21,13 +21,17 @@ import com.example.internitytasks.Adapter.TabAdapter;
 import com.example.internitytasks.Fragments.About;
 import com.example.internitytasks.Fragments.Chat;
 import com.example.internitytasks.Fragments.Home;
+import com.example.internitytasks.Fragments.Profile;
+import com.example.internitytasks.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
-public class Main2Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class DashBoardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
      DrawerLayout drawer;
      ActionBarDrawerToggle toggle;
+     BottomNavigationView bottomNavigationView;
      NavigationView navigationView;
 
 
@@ -38,7 +42,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("ChatBox");
-
+        bottomNavigationView=(BottomNavigationView)findViewById(R.id.bottom_view);
         drawer = findViewById(R.id.drawerlayout);
         navigationView=findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -46,7 +50,31 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         drawer.addDrawerListener(toggle);
         toggle.setDrawerIndicatorEnabled(true);
         toggle.syncState();
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.nav_home2:
 
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new Home()).commit();
+
+                        break;
+                    case R.id.nav_About:
+
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new About()).commit();
+                        break;
+                    case R.id.nav_pro2:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new Profile()).commit();
+                        break;
+                    case R.id.nav_help:
+
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new Chat()).commit();
+                        break;
+                }
+
+                return true;
+            }
+        });
         if(savedInstanceState==null)
         {
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new Home()).commit();
@@ -62,6 +90,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         {
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new Home()).commit();
+                bottomNavigationView.setSelectedItemId(R.id.nav_home2);
 
                 break;
             case R.id.nav_About:
@@ -70,6 +99,11 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_chat:
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new Chat()).commit();
+                bottomNavigationView.setSelectedItemId(R.id.nav_pro2);
+
+                break;
+            case R.id.nav_profile:
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new Profile()).commit();
 
                 break;
         }

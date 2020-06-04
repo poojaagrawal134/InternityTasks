@@ -7,7 +7,7 @@
     android:id="@+id/drawerlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity"
+    tools:context=".Activity.DashBoardActivity"
     android:background="#F7F9FA">
 
     <include
@@ -15,14 +15,6 @@
         android:layout_width="match_parent"
         android:id="@+id/inc"
         layout="@layout/content_main"
-        />
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-
-        android:id="@+id/frame_container"
-
         />
 
     <com.google.android.material.navigation.NavigationView
@@ -33,7 +25,9 @@
         android:fitsSystemWindows="true"
 
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/drawer_menu" />
+        app:menu="@menu/drawer_menu" >
+
+    </com.google.android.material.navigation.NavigationView>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Profile">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/il"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/b"
+        android:layout_marginTop="30dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Peeyush Agrawal"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        android:textColor="@color/colorPrimaryDark"
+        /><TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:text="9859349234"
+    android:layout_marginTop="10dp"
+    android:textSize="30dp"
+    android:textColor="@color/colorPrimaryDark"
+    />
+
+
+
+</LinearLayout>

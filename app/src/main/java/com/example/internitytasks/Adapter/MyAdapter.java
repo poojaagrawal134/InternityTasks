@@ -4,13 +4,12 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.internitytasks.Classes.Model;
-import com.example.internitytasks.Classes.MyHolder;
+import com.example.internitytasks.Models.Model;
+import com.example.internitytasks.Models.MyHolder;
 import com.example.internitytasks.R;
 
 import java.util.ArrayList;
