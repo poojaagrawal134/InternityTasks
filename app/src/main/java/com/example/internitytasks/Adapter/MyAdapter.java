@@ -33,7 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
    holder.mtitles.setText(models.get(position).getTitle());
-        holder.descrip.setText(models.get(position).getTitle());
+        holder.descrip.setText(models.get(position).getDesc());
         holder.im.setImageResource(models.get(position).getImage());
     }
 

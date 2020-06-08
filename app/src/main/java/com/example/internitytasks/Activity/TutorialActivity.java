@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.internitytasks.Adapter.intViewAdapter;
 import com.example.internitytasks.Models.screenItem;
@@ -24,6 +25,7 @@ public class TutorialActivity extends AppCompatActivity {
     intViewAdapter mintViewAdapter;
     TabLayout tabLayout;
     Button btnnext;
+    TextView skip;
     int position=0;
     Button get;
     Animation btn;
@@ -32,6 +34,7 @@ public class TutorialActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
         btnnext=findViewById(R.id.button);
+        skip=findViewById(R.id.skip);
         get=findViewById(R.id.getstarted);
         tabLayout=findViewById(R.id.tab_indicator);
         btn= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.button_animation);
@@ -45,6 +48,12 @@ public class TutorialActivity extends AppCompatActivity {
         mviewpager.setAdapter(mintViewAdapter);
 
         tabLayout.setupWithViewPager(mviewpager);
+        skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TutorialActivity.this,LoginActivity.class));
+            }
+        });
 
         btnnext.setOnClickListener(new View.OnClickListener() {
             @Override
